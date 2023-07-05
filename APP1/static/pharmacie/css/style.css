@@ -1,0 +1,49 @@
+#background-image {
+  background-image: url('/static/pharmacie/images/im4.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 600px;
+  margin-right: 50%;
+
+}
+
+a{
+    color: blue;
+    background-color: white;
+}
+
+.form-label{
+color: beige;
+background-color: rgb(0, 132, 255);
+}
+.btn{
+    background-color: blue;
+}
+
+.container {
+    position: relative;
+    height: 50vh; /* Ajustez cette valeur selon vos besoins */
+  }
+  
+  .form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Styles supplémentaires pour votre formulaire */
+  }
+  .row {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Styles supplémentaires pour votre formulaire */
+  }
+  
+  

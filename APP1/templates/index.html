@@ -1,0 +1,57 @@
+
+{% extends 'base.html' %}
+
+{% load static %} 
+
+{% block content %}
+
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card h-100">
+        <img src="{% static 'pharmacie/images/photo1.jpg' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Message adressé aux personnels</h5>
+          <p class="card-text">La pharmacie ne peut être tenue que par un pharmacien :
+
+            inscrit à l'Ordre des Pharmaciens ;
+            titulaire de la nationalité congolaisese ou ressortissant d'un état membre de l'Union européenne</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-body-secondary">Votre pharmacie de qualité</small>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="{% static 'pharmacie/images/photo2.jpg' %}" class="card-img-top" alt="Ma pharmacie">
+        <div class="card-body">
+          <h5 class="card-title">Droit reservé</h5>
+          <p class="card-text">Le pharmacien est le seul professionnel à être autorisé à exécuter les préparations magistrales et à traiter les ordonnances qui lui sont remises.</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-body-secondary">Nous avons tout ce qu'il vous faut</small>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="{% static 'pharmacie/images/photo3.jpg' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">A savoir</h5>
+          <p class="card-text">La pharmacie est aussi un lieu où toute personne peut obtenir des conseils :
+
+            sur la nutrition ;
+            sur l'hygiène et l'hygiène de vie ;
+            sur tout sujet en relation avec la santé.
+            Par extension, une pharmacie peut commercialiser des produits non médicamenteux.</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-body-secondary">La Santé n'a pas de prix</small>
+        </div>
+      </div>
+    </div>
+    <a href="{% url 'logine' %}" class="btn btn-primary" margin-right style="width: 120px"> deconnexion</a>
+  </div>
+
+{% endblock %}

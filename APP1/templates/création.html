@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #dfd3d3;
+            height: 100vh;
+            
+            
+        }
+
+        #login .container #login-row #login-column #login-box {
+            margin-top: 120px;
+            max-width: 600px;
+            height: 500px;
+            margin-left: 60px;
+            border: none
+            
+            
+        }
+
+        
+
+
+        
+
+        #login .container #login-row #login-column #login-box #login-form {
+            padding: 20px;
+            margin-top: 30px;
+            margin-left: 40px;
+        }
+
+        #login .container #login-row #login-column #login-box #login-form #register-link {
+            margin-top: -85px;
+        }
+
+        #login .container #login-row #login-column #login-box {
+            margin-top: 0px;
+            margin-left: 40px;
+            max-width: 600px;
+            height: 320px;
+            border: 12px solid rgb(255, 255, 255) ;
+            background-color: white;
+        }
+    </style>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <!------ Include the above in your HEAD tag ---------->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="login">
+        <h3 class="text-center text-white pt-5">Création</h3>
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <form id="login-form" class="form" action="" method="post">
+                            {% csrf_token %}
+                            <h3 class="text-center text-info">Création</h3>
+                            <div class="form-group">
+                                <label for="username" class="text-info">Nom d'utilisateur:</label><br>
+                                <input type="text" name="username" id="username" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="text-info">Email:</label><br>
+                                <input type="email" name="email" id="email" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="password" class="text-info">Mot de passe:</label><br>
+                                <input type="text" name="password" id="password" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password1" class="text-info">Confirmer le mot de passe</label><br>
+                                <input type="text" name="password1" id="password1" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" name="submit" class="btn btn-info btn-md" value="valider">
+                            </div><br>
+                            <div id="register-link" class="text-right">
+                                <a href="{% url 'logine' %} " class="text-info">vous avez déjà un compte</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>

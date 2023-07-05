@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+
+{% block 'corps' %}
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="nom">NOM D'UTILISATEUR :</label>
+      <input type="text" class="form-control" id="nom" value="{{data.username}}" name="nom" required>
+    </div>
+    <div class="form-group">
+      <label for="prenom">EMAIL:</label>
+      <input type="email" class="form-control" id="nom" value="{{data.email}}" name="prenom" required>
+    </div>
+
+    <div class="form-group">
+      <label for="adresse"> MOT DE PASSE :</label>
+      <input type="text" class="form-control" id="adr" value="{{data.passwor}}" name="adresse" required>
+    </div>
+    
+    <button type="submit" class="btn">ENREGISTRER</button>
+
+</div>
+<a href="{% url 'updpers' prd.pk %}" class="btn btn-primary" margin-right style="width: 120px"> retour</a>
+</div>  
+  
+  </form>
+
+{% endblock %}
